@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  laravel:{
+    baseUrl:'http://localhost:8000',
+    plugin_otp_lara:'/api/sms'
+  }
 };
 
 /*

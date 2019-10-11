@@ -6,7 +6,7 @@ const routes: Routes = [
     //path: '',
    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   //},
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'show-all-twitte', pathMatch: 'full' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
   { path: 'twitte', loadChildren: './twitte/twitte.module#TwittePageModule' },
