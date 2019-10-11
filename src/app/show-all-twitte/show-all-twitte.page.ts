@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
@@ -27,12 +28,12 @@ export class ShowAllTwittePage implements OnInit {
   }
   async getTwitts() {
     this.present();
-    this.restService.postDataLara(this.userData, "").then(async (result) => {
+    this.restService.postDataLara(this.userData, environment.laravel.twitter_all).then(async (result) => {
       this.resposeData = result;
       console.log(this.resposeData);
-      if (this.resposeData.total) {
-        if (this.resposeData.data) {
-          this.twitts = this.resposeData.data;
+      if (this.resposeData.length) {
+        if (this.resposeData) {
+          this.twitts = this.resposeData;
         }
       }
       else if (this.resposeData.total == 0) {
