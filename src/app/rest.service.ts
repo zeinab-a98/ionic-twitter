@@ -14,11 +14,14 @@ export class RestService {
   }
   
   postDataLara(body, type) {
-    let apiUrl = environment.laravel.baseUrl + environment.laravel.plugin_otp_lara;
+    let apiUrl = environment.laravel.baseUrl + environment.laravel.api;
     type = (type == 'otp1' ? 'requestOtp' : (type == 'otp2' ? 'verifyOtp' : type));
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.set('Content-Type', 'application/json');
+
+      console.log(apiUrl + type);
+
       this.http.post(apiUrl + type, JSON.stringify(body), { headers: headers }).
         subscribe(res => {
           resolve(res.json());

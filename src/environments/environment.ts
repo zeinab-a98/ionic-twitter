@@ -6,7 +6,9 @@ export const environment = {
   production: false,
   laravel:{
     baseUrl:'http://localhost:8000',
-    plugin_otp_lara:'/api/sms'
+    api:'/api/',
+    twitter_all:'twitts/all',
+    twitter:'twitts'
   }
 };
 
