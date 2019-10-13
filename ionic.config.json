@@ -1,5 +1,7 @@
 {
   "name": "twitter-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
