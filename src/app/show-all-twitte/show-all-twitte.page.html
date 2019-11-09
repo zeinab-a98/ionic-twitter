@@ -27,7 +27,7 @@
               احتمالا آیتمی وجود ندارد
               <br>
               روی دکمه بازگشت برای جستجوی مجدد کلیک کنید
-              <ion-button (click)="filterTrip()">بازگشت</ion-button>
+              <ion-button (click)="onBackClicked()">بازگشت</ion-button>
           </ion-col>
         </ion-row>
       </ion-card-content>
@@ -41,8 +41,8 @@
       </ion-fab-button>
     </ion-fab>
     <ion-fab vertical="bottom" horizontal="end">
-      <ion-fab-button (click)="filterTrip()">
-        <ion-icon name="search"></ion-icon>
+      <ion-fab-button (click)="addTwitt()">
+        <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
     
