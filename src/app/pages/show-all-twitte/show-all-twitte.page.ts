@@ -1,8 +1,9 @@
-import { environment } from './../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, ToastController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
-import { RestService } from '../rest.service';
+import { RestService } from '../../rest.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-show-all-twitte',
@@ -20,7 +21,8 @@ export class ShowAllTwittePage implements OnInit {
     public loadingCtrl: LoadingController,
     public restService: RestService,
     public activatedRoute: ActivatedRoute,
-    public toastCtrl: ToastController) {
+    public toastCtrl: ToastController
+    ,private router: Router) {
     
    }
   async ionViewWillEnter() {
@@ -82,4 +84,8 @@ Collapse
   ngOnInit() {
   }
 
+  addTwitt(){
+
+    this.router.navigate(['/twitte']);
+  }
 }

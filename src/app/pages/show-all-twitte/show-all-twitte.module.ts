@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ShowAllTwittePage } from './show-all-twitte.page';
+//import { LoginPage } from '../auth/login/login.page';
+//import { RegisterPage } from '../auth/register/register.page';
 
 const routes: Routes = [
   {
@@ -21,6 +23,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ShowAllTwittePage]
+  declarations: [ShowAllTwittePage],
+  //entryComponents: [LoginPage, RegisterPage]
+  
 })
 export class ShowAllTwittePageModule {}

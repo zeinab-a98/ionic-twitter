@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+ 
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email" name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+    </ion-item>
+  
+    <p text-center>Forgot Password?</p>
+  
+    <ion-button  expand="full" color="primary" (click)="laravelLogin()" >Login</ion-button>
+ 
+  <p text-center>Don't have a account?</p>
+  <ion-button expand="full" color="danger" [routerLink]="['/register']" >Register</ion-button>
+</ion-content>

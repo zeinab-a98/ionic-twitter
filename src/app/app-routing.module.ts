@@ -6,11 +6,14 @@ const routes: Routes = [
     //path: '',
    // loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   //},
-  { path: '', redirectTo: 'show-all-twitte', pathMatch: 'full' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
-  { path: 'twitte', loadChildren: './twitte/twitte.module#TwittePageModule' },
-  { path: 'show-all-twitte', loadChildren: './show-all-twitte/show-all-twitte.module#ShowAllTwittePageModule' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  
+  { path: 'twitte', loadChildren: './pages/twitte/twitte.module#TwittePageModule' },
+  { path: 'show-all-twitte', loadChildren: './pages/show-all-twitte/show-all-twitte.module#ShowAllTwittePageModule' },
+  { path: 'login', loadChildren: './pages/auth/login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './pages/auth/register/register.module#RegisterPageModule' },
+  
+  { path: 'show-mytwittes', loadChildren: './pages/show-mytwittes/show-mytwittes.module#ShowMytwittesPageModule' },
 ];
 @NgModule({
   imports: [

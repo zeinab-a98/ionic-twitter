@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <img src="../../assets/img/sidelist2.png" alt="">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center">
+      توییت های من
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let twtt of twitts" (click)="showTwitts()">
+    <ion-card-content>
+      <ion-row>
+        {{twtt.title}}
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngIf="twitts==undefined">
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="12">
+          <ion-card-title>لطفا چند لحظه صبر کنید</ion-card-title>
+            احتمالا آیتمی وجود ندارد
+            <br>
+            روی دکمه بازگشت برای جستجوی مجدد کلیک کنید
+            <ion-button (click)="onBackClicked()" >بازگشت</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  
+  <ion-fab vertical="bottom" horizontal="start">
+    <ion-fab-button (click)="addTwitt()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['/twitte']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  </ion-footer>

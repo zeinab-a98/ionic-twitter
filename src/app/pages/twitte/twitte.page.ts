@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwittePage implements OnInit {
 
+  //token
   constructor() { }
 
   ngOnInit() {
+    //this.token.localStorage.getItem('token')
   }
 
 }
